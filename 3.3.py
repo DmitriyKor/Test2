@@ -5,4 +5,5 @@ my_new_list1=my_list[:half_length]
 print(my_new_list1)
 my_new_list2=my_list[half_length:]
 print(my_new_list2)
-
+my_result_list=[my_new_list1, my_new_list2]
+print(my_result_list)
