@@ -9,5 +9,9 @@ elif action=='*':
     result=value1*value2
 elif action=='/':
     if value2!=0:
-      result=value1/value2
+        result=value1/value2
+    else:
+        result=None
+else:
+    result=None
 print("Result is ", result)
