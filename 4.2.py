@@ -1,4 +1,4 @@
-my_list = [34, 0, 7, 9, 5, 0, 66, 8, 88, 99, 0, 3]
+my_list = [34, 0, 7, 9, 5, 0, 66, 8, 88, 99, 0, 1]
 print(my_list)
 list_len=len(my_list)
 i=0
@@ -8,5 +8,12 @@ while i<list_len:
         value_sum=value_sum+my_list[i]
     i=i+1
 print(value_sum*my_list[list_len-1])
+
 #method 2
+value_sum=0
+for elem in my_list[::2]:
+  value_sum=value_sum+elem
+print(value_sum*my_list[list_len-1])
+
+#method 3
 print(sum(my_list[::2])*my_list[list_len-1])
