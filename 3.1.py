@@ -13,6 +13,7 @@ while True:
             result=value1/value2
         else:
             result=None
+
     else:
         result=None
     print("Result is ", result)
