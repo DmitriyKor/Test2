@@ -10,7 +10,6 @@ def delete_html_tags(html_file, result_file='cleaned.txt'):
             if (cur_pos==-1):
                 break
             res=res + html[prev_pos:cur_pos]
-                #prev_pos=cur_pos + 1
             cur_pos=html.find('>', cur_pos)
             if (cur_pos==-1):
                 break
