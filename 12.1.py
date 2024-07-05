@@ -21,4 +21,4 @@ def delete_html_tags(html_file, result_file='cleaned.txt'):
             file.write(res)
             file.close()
 
-delete_html_tags('C:/Users/Public/Documents/draft.html', 'C:/Users/Public/Documents/cleaned.txt7')
+delete_html_tags('C:/Users/Public/Documents/draft.html', 'C:/Users/Public/Documents/cleaned.txt')
