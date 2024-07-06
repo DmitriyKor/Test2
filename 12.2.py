@@ -25,7 +25,7 @@ class Purchase:
         self.total = 0
 
     def add_item(self, item, cnt):
-        self.products[item] = cnt  #в реалі ми б збільшили к-сть а не перезаписали
+        self.products[item] = cnt  #Збільшити к-сть?
 
     def __str__(self):
         res = str(self.user)+'\nItems:\n'
