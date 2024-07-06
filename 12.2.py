@@ -30,7 +30,7 @@ class Purchase:
     def __str__(self):
         res = str(self.user)+'\nItems:\n'
         for product, qty in self.products.items():
-            res = res + "{}: {} pcs.\n".format(product.name, qty)
+            res +=  "{}: {} pcs.\n".format(product.name, qty)
         return res
 
     def get_total(self):
