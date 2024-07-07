@@ -7,7 +7,8 @@ class Human:
         self.last_name=last_name
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        g_str = 'm' if self.gender == 'Male' else 'f'
+        return f"{self.first_name} {self.last_name} ({g_str})"
 
 class Student(Human):
 
@@ -16,8 +17,8 @@ class Student(Human):
         self.record_book=record_book
 
     def __str__(self):
-        g_str='m' if self.gender=='Male' else 'f'
-        return f"{super().__str__()} ({g_str}) - {self.record_book}"
+
+        return f"{super().__str__()} - {self.record_book}"
 
 class Group:
 
