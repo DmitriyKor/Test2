@@ -7,8 +7,7 @@ class Human:
         self.last_name=last_name
 
     def __str__(self):
-        g_str = 'm' if self.gender == 'Male' else 'f'
-        return f"{self.first_name} {self.last_name} ({g_str})"
+        return f"{self.first_name} {self.last_name} ({self.gender[0].lower()})"
 
 class Student(Human):
 
