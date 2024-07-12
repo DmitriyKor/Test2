@@ -20,6 +20,9 @@ class Student(Human):
 
         return f"{super().__str__()} - {self.record_book}"
 
+class QuantityException(Exception):
+    pass
+
 class Group:
 
     def __init__(self, number):
@@ -27,7 +30,10 @@ class Group:
         self.group = set()
 
     def add_student(self, student):
-        self.group.add(student)
+        if len(self.group)>=10:
+            raise QuantityException('Group cannot exceed 10 persons')
+        else:
+            self.group.add(student)
 
     def delete_student(self, last_name):
         stdnt=self.find_student(last_name)
@@ -60,3 +66,11 @@ gr.delete_student('Taylor')
 print(gr)  # Only one student
 
 gr.delete_student('Taylor')  # No error!
+
+for i in range(0,20):
+    st = Student('Male', 30, 'Person '+str(i), 'Test', 'ANXXX')
+    try:
+        gr.add_student(st)
+    except QuantityException as e:
+        print(e)
+        break
