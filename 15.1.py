@@ -11,14 +11,14 @@ class Rectangle:
         if isinstance(other, Rectangle):
             return self.get_square() == other.get_square()
         else:
-            return False
+            return NotImplemented
 
     def __add__(self, other):
         if isinstance(other, Rectangle):
             add_width = other.get_square() / self.height
             return Rectangle(self.width+add_width, self.height)
         else:
-            return None
+            return NotImplemented
 
     def __mul__(self, n):
         if isinstance(n, int):
